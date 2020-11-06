@@ -1032,4 +1032,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/VisualPuzzle/VisualPuzzle.unity
-  playerPath: F:/School/Fall 2020/ENSF 545 - VR/Vr_Unity_Builds/UnityProject.exe
+  playerPath: C:/Users/gibson.dziwinski/Desktop/vr_skiing/build/UnityProject.exe

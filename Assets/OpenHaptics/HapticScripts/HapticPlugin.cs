@@ -625,7 +625,7 @@ public class HapticPlugin : MonoBehaviour  {
 		if (isIncorrectVersion)	return;
 
 		Debug.unityLogger.Log("Safing the Manipulator.");
-		if (hapticManipulator == null)
+        if (hapticManipulator == null)
 			return;
 		Rigidbody body = hapticManipulator.GetComponent<Rigidbody>();
 		if (body == null)

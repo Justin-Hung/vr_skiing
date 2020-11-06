@@ -14,7 +14,7 @@ public class HapticGrabber : MonoBehaviour
 	public enum PhysicsToggleStyle{ none, onTouch, onGrab };
 	public PhysicsToggleStyle physicsToggleStyle = PhysicsToggleStyle.none;   //!< Should the grabber script toggle the physics forces on the stylus? 
 
-	public bool DisableUnityCollisionsWithTouchableObjects = true;
+	public bool DisableUnityCollisionsWithTouchableObjects = false;
 
 	private  GameObject hapticDevice = null;   //!< Reference to the GameObject representing the Haptic Device
 	private bool buttonStatus = false;			//!< Is the button currently pressed?
@@ -144,9 +144,21 @@ public class HapticGrabber : MonoBehaviour
 	void OnCollisionEnter(Collision collisionInfo)
 	{
 		Collider other = collisionInfo.collider;
-		//Debug.unityLogger.Log("OnCollisionEnter : " + other.name);
+	    Debug.unityLogger.Log("OnCollisionEnter : " + other.name);
 		GameObject that = other.gameObject;
-		Rigidbody thatBody = that.GetComponent<Rigidbody>();
+
+        if (that.name == "Floor")
+        {
+            Debug.unityLogger.Log("Game Start.");
+        }
+
+        if (that.name == "Cylinder")
+        {
+            Debug.unityLogger.Log("Game Kill.");
+        }
+
+
+        Rigidbody thatBody = that.GetComponent<Rigidbody>();
 
 		// If this doesn't have a rigidbody, walk up the tree. 
 		// It may be PART of a larger physics object.
@@ -165,16 +177,6 @@ public class HapticGrabber : MonoBehaviour
 		if( collisionInfo.rigidbody != null )
 			hapticTouchEvent(true);
 
-		if(that.name == "Floor")
-		{
-			Debug.logger.Log("Game Start");
-		}
-
-		if(that.name == "Cylinder")
-		{
-			Debug.logger.Log("Game Kill");
-		}
-
 
 		if (thatBody == null)
 			return;
@@ -187,9 +189,14 @@ public class HapticGrabber : MonoBehaviour
 	void OnCollisionExit(Collision collisionInfo)
 	{
 		Collider other = collisionInfo.collider;
-		//Debug.unityLogger.Log("onCollisionrExit : " + other.name);
+		Debug.unityLogger.Log("onCollisionrExit : " + other.gameObject.name);
 
-		if( collisionInfo.rigidbody != null )
+        if (other.gameObject.name == "Floor")
+        {
+            Debug.unityLogger.Log("Game Kill.");
+        }
+
+        if ( collisionInfo.rigidbody != null )
 			hapticTouchEvent( false );
 
 		if (touching == null)
@@ -204,10 +211,6 @@ public class HapticGrabber : MonoBehaviour
 			touching = null;
 		}
 
-		if(other.gameObject.name == "Floor")
-		{
-			Debug.logger.Log("Game Kill");
-		}
 	}
 		
 	//! Begin grabbing an object. (Like closing a claw.) Normally called when the button is pressed. 

@@ -4,6 +4,13 @@ using UnityEngine;
 //using HapticPlugin;
 
 
+
+public static class Globals
+{
+	public static bool gameRunning = false;
+}
+
+
 //! This object can be applied to the stylus of a haptic device. 
 //! It allows you to pick up simulated objects and feel the involved physics.
 //! Optionally, it can also turn off physics interaction when nothing is being held.
@@ -150,11 +157,13 @@ public class HapticGrabber : MonoBehaviour
         if (that.name == "Floor")
         {
             Debug.unityLogger.Log("Game Start.");
+			Globals.gameRunning = true;
         }
 
-        if (that.name == "Cylinder")
+        if (that.name == "Cube")
         {
             Debug.unityLogger.Log("Game Kill.");
+			Globals.gameRunning = false;
         }
 
 
@@ -194,6 +203,7 @@ public class HapticGrabber : MonoBehaviour
         if (other.gameObject.name == "Floor")
         {
             Debug.unityLogger.Log("Game Kill.");
+			Globals.gameRunning = false;
         }
 
         if ( collisionInfo.rigidbody != null )

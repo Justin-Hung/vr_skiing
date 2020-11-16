@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.Utility.DragRigidbody
     Assembly-CSharp.dll:
     - BlockPuzzleController
+    - ChangingText
     - Generator
     - HapticGrabber
     - HapticPlugin
@@ -72,19 +73,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 13012}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 13014}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13500}
+      Script: {instanceID: 13498}
     - Class: 114
-      Script: {instanceID: 13916}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 15450}
+      Script: {instanceID: 13918}
+    - Class: 114
+      Script: {instanceID: 17626}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -490,6 +493,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: PlatformSpecificContent
+  - hash:
+      serializedVersion: 2
+      Hash: 0643daab0d5400b78333b8838cd82d9f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Generator
   - hash:
       serializedVersion: 2
       Hash: 0574135745ea880aa1c1be2f2057ab89
@@ -1032,10 +1041,10 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 0fb7e55586aae5e077f3d0000a70f793
+      Hash: bccda757ef2bcf6a3344d0ada67782c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Generator
+    className: ChangingText
   platform: 19
   scenePathNames:
   - Assets/VisualPuzzle/VisualPuzzle.unity

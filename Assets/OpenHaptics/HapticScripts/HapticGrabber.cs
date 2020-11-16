@@ -7,7 +7,7 @@ using UnityEngine;
 
 public static class Globals
 {
-	public static bool gameRunning = false;
+	public static bool gameRunning = true;
 }
 
 
@@ -160,7 +160,7 @@ public class HapticGrabber : MonoBehaviour
 			Globals.gameRunning = true;
         }
 
-        if (that.name == "Cube")
+        if (that.name == "Cube" || that.name == "Sphere" || that.name == "Cylinder" || that.name == "Capsule")
         {
             Debug.unityLogger.Log("Game Kill.");
 			Globals.gameRunning = false;

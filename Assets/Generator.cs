@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(framecounter == 180 && Globals.gameRunning)
+        if ( (framecounter % 180) == 0 && Globals.gameRunning)
         {
             int rand = Random.Range(0,4);
             GameObject objectToGenerate = objectToGenerate0;

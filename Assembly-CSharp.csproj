@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</ProjectGuid>
+    <ProjectGuid>{9C8098B4-4063-F610-C7C3-5007234CCCC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,7 +51,15 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.1.3f1</UnityVersion>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2020.1.3f1</UnityVersion>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChangingText.cs" />
     <Compile Include="Assets\OpenHaptics\HapticDemos\DemoScripts\ErrorDemo.cs" />
     <Compile Include="Assets\OpenHaptics\HapticDemos\DemoScripts\EscExit.cs" />
     <Compile Include="Assets\OpenHaptics\HapticDemos\DemoScripts\TextureDemoScript.cs" />
@@ -59,6 +67,7 @@
     <Compile Include="Assets\OpenHaptics\HapticDemos\DemoScripts\CameraRotate.cs" />
     <Compile Include="Assets\OpenHaptics\HapticScripts\HapticGrabber.cs" />
     <Compile Include="Assets\OpenHaptics\HapticDemos\DemoScripts\VibrationDemoScript.cs" />
+    <Compile Include="Assets\Generator.cs" />
     <Compile Include="Assets\OpenHaptics\HapticScripts\HapticFitToCamera.cs" />
     <Compile Include="Assets\OpenHaptics\HapticDemos\DemoScripts\BlockPuzzleController.cs" />
     <Compile Include="Assets\OpenHaptics\HapticScripts\HapticPluginSafetyScript.cs" />
@@ -69,7 +78,7 @@
     <Compile Include="Assets\OpenHaptics\HapticScripts\HapticEffect.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\OpenHaptics\HapticPlugin\OHToUnityBridge.dll" />
+    <None Include="Assets\OpenHaptics\HapticPlugin\OHToUnityBridge.dll" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -658,11 +667,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{FDE690F1-626F-FFA0-5754-E83120972A79}</Project>
+      <Project>{98B0DCE5-1EEF-E106-26BD-06FFE93A807C}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

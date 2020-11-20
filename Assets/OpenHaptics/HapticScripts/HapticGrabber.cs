@@ -7,7 +7,7 @@ using UnityEngine;
 
 public static class Globals
 {
-	public static bool gameRunning = true;
+	public static bool gameRunning = false;
 }
 
 
@@ -153,6 +153,7 @@ public class HapticGrabber : MonoBehaviour
 		Collider other = collisionInfo.collider;
 	    Debug.unityLogger.Log("OnCollisionEnter : " + other.name);
 		GameObject that = other.gameObject;
+        Debug.unityLogger.Log("collision with: " + other.name);
 
         if (that.name == "Floor")
         {
@@ -160,7 +161,8 @@ public class HapticGrabber : MonoBehaviour
 			Globals.gameRunning = true;
         }
 
-        if (that.name == "Cube" || that.name == "Sphere" || that.name == "Cylinder" || that.name == "Capsule")
+        if (that.name == "Cube(Clone)" || that.name == "Sphere(Clone)" || that.name == "Cylinder(Clone)" || that.name == "Capsule(Clone)" ||
+            that.name == "Cube" || that.name == "Sphere" || that.name == "Cylinder" || that.name == "Capsule")
         {
             Debug.unityLogger.Log("Game Kill.");
 			Globals.gameRunning = false;

@@ -102,6 +102,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -1045,7 +1047,13 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 7e3c1e85e3c420bab66a73fd8633cb25
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SnowyCliffMaterialSwitch
   platform: 19
   scenePathNames:
   - Assets/VisualPuzzle/VisualPuzzle.unity
-  playerPath: C:/Users/justin.hung.UC/Desktop/vr_skii_build/UnityProject.exe
+  playerPath: F:/School/Fall 2020/ENSF 545 - VR/vr_skiing/build/UnityProject.exe

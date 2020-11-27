@@ -73,21 +73,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12524}
     - Class: 114
-      Script: {instanceID: 12644}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12812}
+      Script: {instanceID: 12814}
     - Class: 114
-      Script: {instanceID: 12964}
+      Script: {instanceID: 12966}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13312}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13500}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 13504}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13920}
+      Script: {instanceID: 13922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -423,6 +423,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
     className: AnalyticsTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 7e3c1e85e3c420bab66a73fd8633cb25
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SnowyCliffMaterialSwitch
   - hash:
       serializedVersion: 2
       Hash: db1f205a8c9dae1c39098cd23fc97f63
@@ -1047,13 +1053,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 7e3c1e85e3c420bab66a73fd8633cb25
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SnowyCliffMaterialSwitch
   platform: 19
   scenePathNames:
   - Assets/VisualPuzzle/VisualPuzzle.unity
-  playerPath: F:/School/Fall 2020/ENSF 545 - VR/vr_skiing/build/UnityProject.exe
+  playerPath: C:/Users/gibson.dziwinski/Desktop/vr_skiing/Build/UnityProject.exe

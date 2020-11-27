@@ -44,7 +44,7 @@ public class HapticSurface : MonoBehaviour {
 	void Start () {
 		if (GetComponent<MeshCollider>() == null && GetComponent<MeshFilter>() == null)
 		{
-			Debug.LogError("HapticSurface has been assigned to object without mesh.");
+            Debug.unityLogger.Log("HapticSurface has been assigned to object without mesh.");
 		}
 
 		if( gameObject.tag == "Untagged" )
@@ -67,7 +67,10 @@ public class HapticSurface : MonoBehaviour {
 		if (Flip_Normals != oldFlipNormals)	needUpdate = true;
 		if (hlTouchable != oldFacing) needUpdate = true;
 
-		if (needUpdate)
+        Debug.unityLogger.Log("Need update: " + needUpdate);
+
+
+        if (true)
 		{
 			HapticPlugin.shape_settings(gameObject.GetInstanceID(), hlStiffness, hlDamping, hlStaticFriction, hlDynamicFriction, hlPopThrough);
 

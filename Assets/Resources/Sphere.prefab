@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1430557606479072066}
   - component: {fileID: 981518206473969908}
   - component: {fileID: -7693297906273675330}
-  - component: {fileID: 3459324423069570465}
+  - component: {fileID: -4701194862044199033}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Touchable
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c66443d868d051a40b467e1c3f4d1642, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
     value: {x: 0, y: 0, z: -1}
     space: 1
   ignoreTimescale: 0
---- !u!54 &3459324423069570465
+--- !u!54 &-4701194862044199033
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +163,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

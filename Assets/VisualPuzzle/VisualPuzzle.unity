@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 1895143807}
   - component: {fileID: 1895143806}
   - component: {fileID: 1895143810}
+  - component: {fileID: 1895143811}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Touchable
@@ -790,7 +791,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa377e3abcbf51a428dfdde817ca883f, type: 2}
+  - {fileID: 2100000, guid: 1a37d212766c4e444bd183225d3816c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -821,7 +822,7 @@ BoxCollider:
   m_GameObject: {fileID: 1895143805}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -861,6 +862,26 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1895143811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895143805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc2be0ac8462bf479030279e23b7d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hlTouchModel: 0
+  hlTouchable: 0
+  hlStiffness: 0.047
+  hlDamping: 1
+  hlStaticFriction: 0.067
+  hlDynamicFriction: 0.031
+  hlPopThrough: 0
+  snapDistance: 1
 --- !u!1001 &2121000293
 PrefabInstance:
   m_ObjectHideFlags: 0

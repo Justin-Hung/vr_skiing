@@ -689,7 +689,9 @@ public class HapticPlugin : MonoBehaviour  {
 
 	void updateShapes()
 	{
-		if (isIncorrectVersion)	return;
+        //Debug.unityLogger.Log("This runs every frame");
+        if (this.shapesEnabled) setupShapes();
+        if (isIncorrectVersion)	return;
 
 		GameObject[] myObjects = GameObject.FindGameObjectsWithTag("Touchable") as GameObject[];
 
